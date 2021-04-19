@@ -1,48 +1,50 @@
 import React from "react";
-import { View,StyleSheet,Image,TouchableOpacity } from "react-native";
+import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { FontAwesome, Ionicons  } from '@expo/vector-icons'; 
 
-export default function Header(){
-    return(
+export default function Header() {
+    return (
         <View style={style.header}>
             <TouchableOpacity>
                 <View style={style.notification}>
-                    <Image source={require('./bell.png')}/>
+                    <FontAwesome name="bell" size={24} color="orange" />
                 </View>
             </TouchableOpacity>
             <View style={style.logo}>
-                <Image style={{width:150,height:40}} source={require('./logo.png')}/>
+                <Image style={style.coinmomo_logo} source={require('./logo.png')} />
             </View>
             <TouchableOpacity>
                 <View style={style.search}>
-                    <Image style={{width:22,height:22}} source={require('./search.png')}/>
+                    <Ionicons name="md-search" size={24} color="black" />
                 </View>
             </TouchableOpacity>
         </View>
     )
 }
-const style=StyleSheet.create({
-    notification:{
-       paddingTop:25,
-      paddingLeft:10
+const style = StyleSheet.create({
+    notification: {
+        paddingTop: 25,
+        paddingLeft: 10
     },
-    logo:{
-        paddingTop:20,
-       
+    logo: {
+        paddingTop: 20
     },
-    header:{
-        display:"flex",
-        flexDirection:"row",
-        backgroundColor:"white",
-        height:100,
-        marginTop:25,
-        justifyContent:"space-between",
-        borderBottomColor:"black",
-        borderBottomWidth:1 
+    header: {
+        display: "flex",
+        flexDirection: "row",
+        backgroundColor: "white",
+        height: 100,
+        marginTop: 25,
+        justifyContent: "space-between",
+        borderBottomColor: "black",
+        borderBottomWidth: 1
     },
-    search:{
-        paddingTop:28,
-        paddingRight:15
-  
+    search: {
+        paddingTop: 28,
+        paddingRight: 15
+    },
+    coinmomo_logo:{
+        height:40,
+        width:150
     }
-
 })
