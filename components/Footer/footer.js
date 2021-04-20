@@ -2,8 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
 
-
-export default function Footer() {
+export default function Footer(props) {
     return (
         <View style={style.Footer}>
             <View style={style.market_logo}>
@@ -13,7 +12,7 @@ export default function Footer() {
                 </TouchableOpacity>
             </View>
             <View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>props.props.navigation.navigate("portfolio")}>
                     <MaterialCommunityIcons style={style.portfolio_icon} name="account" size={27} color="white" />
                     <Text style={style.footer_icon_text}>Portfolio</Text>
                 </TouchableOpacity>
@@ -30,7 +29,7 @@ export default function Footer() {
                     <Text style={style.footer_icon_text}>Explore</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity >
                 <View style={style.more}>
                     <Feather name="more-horizontal" size={27} color="white" />
                     <Text style={style.footer_icon_text}>More</Text>
