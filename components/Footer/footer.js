@@ -1,9 +1,9 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, Dimensions } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
 
-
-export default function Footer() {
+const screenHeight = Math.round(Dimensions.get("window").height);
+const Footer = () => {
     return (
         <View style={style.Footer}>
             <View style={style.market_logo}>
@@ -42,7 +42,7 @@ export default function Footer() {
 const style = StyleSheet.create({
     Footer: {
         backgroundColor: "#5142a9",
-        marginTop: 490,
+        marginTop: screenHeight-190,
         paddingTop: 10,
         paddingBottom: 19,
         display: "flex",
@@ -69,3 +69,5 @@ const style = StyleSheet.create({
         marginLeft:7
     }
 })
+
+export default Footer;

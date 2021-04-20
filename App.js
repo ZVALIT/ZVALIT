@@ -1,13 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import Footer from './components/Footer/footer';
-import Header from './components/header/header';
+import Home from './components/home/home';
 
 export default function App() {
   return (
     <View>
-      <Header />
-      <Footer />
+      <Home />
     </View>
   );
 }
