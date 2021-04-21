@@ -8,7 +8,7 @@ const Footer = () => {
         <View style={style.Footer}>
             <View style={style.market_logo}>
                 <TouchableOpacity>
-                    <Entypo name="menu" size={27} color="white" />  
+                    <Entypo style={style.market_icon} name="menu" size={27} color="white" />  
                     <Text style={style.footer_icon_text}>Market</Text>
                 </TouchableOpacity>
             </View>
@@ -67,6 +67,9 @@ const style = StyleSheet.create({
     },
     explore_icon:{
         marginLeft:7
+    },
+    market_icon:{
+        marginLeft:5
     }
 })
 
