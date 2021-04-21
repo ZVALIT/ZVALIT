@@ -27,8 +27,6 @@ const style=StyleSheet.create({
     signintext:{
         textAlign:"center",
         marginTop:20,
-        fontWeight:"bold",
-        fontFamily:"sans-serif"
     },
     portfolio:{
         height:30,
@@ -40,7 +38,7 @@ const style=StyleSheet.create({
     },
     signinButton:{
         textAlign:"center",
-        marginTop:150,
+        marginTop:100,
         width:300,
         height:30,
         backgroundColor:"#8bdc84",
@@ -50,9 +48,11 @@ const style=StyleSheet.create({
         marginBottom:10
     },
     coinmomo_logo:{
+        display:"flex",
         width:150,
         height:40,
-        marginLeft:120,
-        marginTop:150
+        marginLeft:"auto",
+        marginRight:"auto",
+        marginTop:75
     }
 })

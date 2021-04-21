@@ -12,7 +12,7 @@ export default class Signin extends React.Component{
             isSelected:!this.state.isSelected
         })
     }
-    onValueChange1=()=>{
+    onValueChangetext=()=>{
         this.setState({
             isSelect:!this.state.isSelect
         })
@@ -20,24 +20,24 @@ export default class Signin extends React.Component{
     render(){
         return(
             <View>
-                <View style={style.back}>
+                <View style={style.signup_back}>
                     <TouchableOpacity onPress={()=>this.props.navigation.navigate( "portfolio" )}>
                         <AntDesign name="arrowleft" size={24} color="black" />
                     </TouchableOpacity>
-                    <Text style={style.signintext}>CREATE ACCOUNT</Text>
+                    <Text style={style.signuptext}>CREATE ACCOUNT</Text>
                 </View>
                 <View style={style.container}>
                     <View>
                         <Text style={style.text}>Email</Text>
-                        <TextInput style={style.SigninInputText}></TextInput>
+                        <TextInput style={style.SignupInputText}></TextInput>
                     </View>
                     <View>
                         <Text style={style.text}>Password</Text>
-                        <TextInput secureTextEntry style={style.SigninInputText}></TextInput>
+                        <TextInput secureTextEntry style={style.SignupInputText}></TextInput>
                     </View>
                     <View>
                         <Text style={style.text}>Confirm Password</Text>
-                        <TextInput secureTextEntry style={style.SigninInputText}></TextInput>
+                        <TextInput secureTextEntry style={style.SignupInputText}></TextInput>
                     </View>
                     <View style={style.conditions}> 
                         <View style={style.CheckBox}>
@@ -45,14 +45,18 @@ export default class Signin extends React.Component{
                             value={this.state.isSelected}
                             onValueChange={this.onValueChange}
                             /> 
-                            <Text style={style.conditionstext}>I agree to CoinMomo's Terms of Service and Privacy Policy.</Text>
+                            <TouchableOpacity onPress={this.onValueChange}>
+                                <Text style={style.conditionstext}>I agree to CoinMomo's Terms of Service and Privacy Policy.</Text>
+                            </TouchableOpacity>
                         </View>
                         <View style={style.CheckBox}>
                             <CheckBox
                             value={this.state.isSelect}
-                            onValueChange={this.onValueChange1}
-                            /> 
-                            <Text style={style.conditionstext}>I would like to subscribe to CoinMomo's daily newsletter. </Text>
+                            onValueChange={this.onValueChangetext}
+                            />
+                            <TouchableOpacity onPress={this.onValueChangetext}>
+                                <Text style={style.conditionstext}>I would like to subscribe to CoinMomo's daily newsletter. </Text>
+                            </TouchableOpacity> 
                         </View>                
                     </View>
                 </View>
@@ -67,17 +71,17 @@ export default class Signin extends React.Component{
 }
 const style=StyleSheet.create({
     conditionstext:{
-        fontSize:13,
+        fontSize:12,
         marginTop:5
     },
     CheckBox:{
         display:"flex",
         flexDirection:"row",
         marginTop:10,
-        width:360
     },
-    signintext:{
-        textAlign:"center",
+    signuptext:{
+        marginLeft:"auto",
+        marginRight:"auto",
         fontWeight:"bold"
     },
     container:{
@@ -85,13 +89,12 @@ const style=StyleSheet.create({
         borderRadius:6,
         marginLeft:20
     },
-    SigninInputText:{
+    SignupInputText:{
         marginTop:10,
-        width:360,
         height:20,
         borderBottomWidth:1,
-        borderBottomColor:"#8bdc84",  
-        paddingLeft:5
+        borderBottomColor:"#8bdc84",
+        marginRight:20  
     },
     text:{
         marginTop:15 
@@ -99,7 +102,7 @@ const style=StyleSheet.create({
     signupbutton:{
         width:300,
         height:30,
-        marginTop:150,
+        marginTop:100,
         backgroundColor:"#8bdc84",
         textAlign:"center",
         paddingTop:5,
@@ -108,13 +111,11 @@ const style=StyleSheet.create({
     signup:{
         alignItems:"center",
     },
-    back:{
+    signup_back:{
         display:"flex",
         flexDirection:"row",
         marginTop:50,
-        marginLeft:20,
-        justifyContent:"space-between",
-        marginRight:160
+        marginLeft:5,
     },
     conditions:{
         marginTop:15

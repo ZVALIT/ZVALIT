@@ -36,8 +36,9 @@ export default class Signin extends React.Component{
 }
 const style=StyleSheet.create({
     signintext:{
-        textAlign:"center",
-        fontWeight:"bold"
+        fontWeight:"bold",
+        marginLeft:"auto",
+        marginRight:"auto"
     },
     container:{
         marginTop:80,
@@ -46,11 +47,10 @@ const style=StyleSheet.create({
     },
     SigninInputText:{
         marginTop:10,
-        width:360,
         height:20,
         borderBottomWidth:1,
         borderBottomColor:"#8bdc84",  
-        paddingLeft:5
+        marginRight:20
     },
     text:{
         marginTop:15 
@@ -58,7 +58,7 @@ const style=StyleSheet.create({
     LoginButton:{
         width:300,
         height:30,
-        marginTop:220,
+        marginTop:120,
         backgroundColor:"#8bdc84",
         textAlign:"center",
         paddingTop:5,
@@ -69,15 +69,12 @@ const style=StyleSheet.create({
     },
     forgotpassword:{
         display:"flex",
-        marginLeft:250,
         marginTop:15   
     },
     back:{
         display:"flex",
         flexDirection:"row",
         marginTop:50,
-        marginLeft:20,
-        justifyContent:"space-between",
-        marginRight:180
+        marginLeft:5
     }
 })
