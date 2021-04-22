@@ -1,13 +1,15 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, Dimensions } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
 
-export default function Footer(props) {
+// manipulating screen height for Footer placement
+const screenHeight = Math.round(Dimensions.get("window").height);
+const Footer = () => {
     return (
         <View style={style.Footer}>
             <View style={style.market_logo}>
                 <TouchableOpacity>
-                    <Entypo name="menu" size={27} color="white" />  
+                    <Entypo style={style.market_icon} name="menu" size={27} color="white" />  
                     <Text style={style.footer_icon_text}>Market</Text>
                 </TouchableOpacity>
             </View>
@@ -36,12 +38,12 @@ export default function Footer(props) {
                 </View>
             </TouchableOpacity>
         </View>
-    )
+    );
 }
 const style = StyleSheet.create({
     Footer: {
         backgroundColor: "#5142a9",
-        marginTop: 490,
+        marginTop: screenHeight-190,
         paddingTop: 10,
         paddingBottom: 19,
         display: "flex",
@@ -66,5 +68,10 @@ const style = StyleSheet.create({
     },
     explore_icon:{
         marginLeft:7
+    },
+    market_icon:{
+        marginLeft:5
     }
-})
+});
+
+export default Footer;
