@@ -7,19 +7,19 @@ export default function Header() {
         <View style={style.header}>
             <TouchableOpacity>
                 <View style={style.notification}>
-                    <FontAwesome name="bell" size={24} color="orange" />
+                    <FontAwesome name='bell' size={24} color='orange' />
                 </View>
             </TouchableOpacity>
             <View style={style.logo}>
-                <Image style={style.coinmomo_logo} source={require('./logo.png')} />
+                <Image style={style.coinmomoLogo} source={require('../../assets/logo.png')} />
             </View>
             <TouchableOpacity>
                 <View style={style.search}>
-                    <Ionicons name="md-search" size={24} color="black" />
+                    <Ionicons name='md-search' size={24} color='black' />
                 </View>
             </TouchableOpacity>
         </View>
-    )
+    );
 }
 const style = StyleSheet.create({
     notification: {
@@ -30,21 +30,21 @@ const style = StyleSheet.create({
         paddingTop: 20
     },
     header: {
-        display: "flex",
-        flexDirection: "row",
-        backgroundColor: "white",
+        display: 'flex',
+        flexDirection: 'row',
+        backgroundColor: 'white',
         height: 100,
         marginTop: 25,
-        justifyContent: "space-between",
-        borderBottomColor: "black",
+        justifyContent: 'space-between',
+        borderBottomColor: 'black',
         borderBottomWidth: 1
     },
     search: {
         paddingTop: 28,
         paddingRight: 15
     },
-    coinmomo_logo:{
+    coinmomoLogo:{
         height:40,
         width:150
     }
-})
+});

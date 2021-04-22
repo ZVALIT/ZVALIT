@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Dimensions } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
 
+// manipulating screen height for Footer placement
 const screenHeight = Math.round(Dimensions.get("window").height);
 const Footer = () => {
     return (
@@ -37,7 +38,7 @@ const Footer = () => {
                 </View>
             </TouchableOpacity>
         </View>
-    )
+    );
 }
 const style = StyleSheet.create({
     Footer: {
@@ -71,6 +72,6 @@ const style = StyleSheet.create({
     market_icon:{
         marginLeft:5
     }
-})
+});
 
 export default Footer;
