@@ -42,13 +42,15 @@ const Footer = () => {
 }
 const style = StyleSheet.create({
     Footer: {
-        backgroundColor: "#5142a9",
-        marginTop: screenHeight-190,
+        backgroundColor: "#5142a9",    
         paddingTop: 10,
         paddingBottom: 19,
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        bottom:0,
+        position: 'absolute',
+        width: '100%'
     },
     market_logo: {
         paddingLeft: 15
