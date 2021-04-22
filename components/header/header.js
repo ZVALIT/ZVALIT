@@ -11,7 +11,7 @@ export default function Header() {
                 </View>
             </TouchableOpacity>
             <View style={style.logo}>
-                <Image style={style.coinmomoLogo} source={require('../../assets/logo.png')} />
+                <Image style={style.coinmomoLogo} source={require('../../assets/img/logo.png')} />
             </View>
             <TouchableOpacity>
                 <View style={style.search}>
