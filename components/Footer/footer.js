@@ -1,9 +1,7 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Dimensions } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
 
-// manipulating screen height for Footer placement
-const screenHeight = Math.round(Dimensions.get("window").height);
 const Footer = () => {
     return (
         <View style={style.Footer}>
@@ -39,7 +37,8 @@ const Footer = () => {
             </TouchableOpacity>
         </View>
     );
-}
+};
+
 const style = StyleSheet.create({
     Footer: {
         backgroundColor: "#5142a9",    
