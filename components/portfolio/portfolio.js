@@ -18,7 +18,7 @@ export default function Portfolio(props){
                 <Text>Sign in to view your profile</Text> 
             </View>
             <View style={style.signupAndSignin}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>props.navigation.navigate('signin')}>
                     <Text style={style.signinButton}>SIGN IN</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>

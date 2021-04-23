@@ -14,7 +14,6 @@ export default function App() {
         screenOptions={{
         headerTitleAlign: "center",
         headerShown:false,
-
         headerStyle: {
           backgroundColor: "#000"
         },
@@ -23,12 +22,14 @@ export default function App() {
           fontWeight: "bold"
         }
       }}>
-        <Stack.Screen name="portfolio"  component={ Portfolio } />
-        <Stack.Screen name="signin"  component={Signin} />
-        <Stack.Screen name="signup"  component={Signup} />
-        <Stack.Screen name="home" component={Home}/>
+        <Stack.Screen name="portfolio" component={Portfolio} />
+        <Stack.Screen name="signin"    component={Signin} />
+        <Stack.Screen name="signup"    component={Signup} />
+        <Stack.Screen name="home"      component={Home}/>
       </Stack.Navigator>
     </NavigationContainer>
 
   );
 }
+
+

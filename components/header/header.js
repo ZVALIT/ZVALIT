@@ -35,9 +35,7 @@ const style = StyleSheet.create({
         backgroundColor: 'white',
         height: 100,
         marginTop: 25,
-        justifyContent: 'space-between',
-        borderBottomColor: 'black',
-        borderBottomWidth: 1
+        justifyContent: 'space-between'
     },
     search: {
         paddingTop: 28,
