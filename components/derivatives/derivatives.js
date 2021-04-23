@@ -12,6 +12,6 @@ export default function Derivatives() {
 const style=StyleSheet.create({
     Derivatives:{
         textAlign:'center',
-        marginTop:200
+        marginTop:150
     }
 })

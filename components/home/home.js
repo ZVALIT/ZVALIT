@@ -6,17 +6,21 @@ import MyTabs from "../headertabs/headertabs"
 
 export default function Home(props) {
     return (
-        <View>
+        <View style={styles.Home}>
             <Header />
             <View style={styles.headerTabs}>
                 <MyTabs/>
             </View>
             <Footer props={props} />
         </View>
-    )
+    );
 }
 const styles = StyleSheet.create({
     headerTabs:{
-        height:350
+        height:300
+    },
+    Home:{
+        position: 'relative',
+        height: '100%'
     }
 })

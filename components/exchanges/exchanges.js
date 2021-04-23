@@ -12,6 +12,6 @@ export default function Exchanges() {
 const style=StyleSheet.create({
     Exchanges:{
         textAlign:'center',
-        marginTop:200
+        marginTop:150
     }
 })
