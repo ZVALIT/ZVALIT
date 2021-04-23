@@ -1,11 +1,6 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Dimensions, StatusBar } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
-
-// manipulating screen height for Footer placement
-// const screenHeight = Math.round(Dimensions.get("window").height);
-const deviceHeight = Dimensions.get('window').height; 
-const screenHeight = Platform.select({ ios: deviceHeight, android: StatusBar.currentHeight > 24 ? deviceHeight : deviceHeight - StatusBar.currentHeight, });
 
 const Footer = (props) => {
     return (
@@ -42,17 +37,17 @@ const Footer = (props) => {
             </TouchableOpacity>
         </View>
     );
-}
+};
+
 const style = StyleSheet.create({
     Footer: {
-        backgroundColor: "#5142a9",
-        marginTop: screenHeight-170,
+        backgroundColor: '#5142a9',    
         paddingTop: 10,
         paddingBottom: 19,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        bottom: 0,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        bottom:0,
         position: 'absolute',
         width: '100%'
     },
@@ -63,7 +58,7 @@ const style = StyleSheet.create({
         paddingRight: 15
     },
     footer_icon_text: {
-        color: "white"
+        color: 'white'
     },
     portfolio_icon:{
         marginLeft:10
