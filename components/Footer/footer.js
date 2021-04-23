@@ -42,8 +42,8 @@ const Footer = (props) => {
 const style = StyleSheet.create({
     Footer: {
         backgroundColor: '#5142a9',
-        paddingTop: 10,
-        paddingBottom: 19,
+        paddingTop: 7,
+        paddingBottom: 7,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',

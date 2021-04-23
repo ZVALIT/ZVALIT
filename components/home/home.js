@@ -17,7 +17,8 @@ export default function Home(props) {
 }
 const styles = StyleSheet.create({
     headerTabs:{
-        height:300
+        height: 100,
+        marginTop: -10
     },
     Home:{
         position: 'relative',

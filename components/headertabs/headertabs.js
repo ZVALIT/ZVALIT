@@ -6,7 +6,6 @@ import Exchanges from '../exchanges/exchanges';
 import { Dimensions } from "react-native";
 
 const deviceWidth = Dimensions.get('window').width;
-console.log(deviceWidth)
 const Tab = createMaterialTopTabNavigator();
 
 export default function MyTabs() {
@@ -29,14 +28,14 @@ export default function MyTabs() {
       activeTintColor: '#8bdc84',
       inactiveTintColor: 'black',
       labelStyle: { fontSize: fontSize, fontWeight: 'bold' },
-      style: { backgroundColor: 'white' },
+      style: {borderColor:'#dcdcdc', marginTop: 10, borderBottomWidth:1, borderTopWidth:1, flex: 1},
       indicatorStyle: { borderBottomWidth: 2, borderBottomColor: '#8bdc84' }
       }}
     >
       <Tab.Screen
         name="Cryptocurrency"
         component={Cryptocurrency}
-        options={{ tabBarLabel: 'Cryptocurrency' }}
+        options={{ tabBarLabel: 'Currency' }}
       />
       <Tab.Screen
         name="derivatives"

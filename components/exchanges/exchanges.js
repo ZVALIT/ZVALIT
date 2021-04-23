@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Text, View, StyleSheet} from 'react-native';
 
-
 export default function Exchanges() {
   return (
     <View>
@@ -11,7 +10,6 @@ export default function Exchanges() {
 }
 const style=StyleSheet.create({
     Exchanges:{
-        textAlign:'center',
-        marginTop:150
+        textAlign:'center'
     }
 })
