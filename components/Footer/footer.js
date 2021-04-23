@@ -41,12 +41,12 @@ const Footer = () => {
 
 const style = StyleSheet.create({
     Footer: {
-        backgroundColor: "#5142a9",    
+        backgroundColor: '#5142a9',    
         paddingTop: 10,
         paddingBottom: 19,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         bottom:0,
         position: 'absolute',
         width: '100%'
@@ -58,7 +58,7 @@ const style = StyleSheet.create({
         paddingRight: 15
     },
     footer_icon_text: {
-        color: "white"
+        color: 'white'
     },
     portfolio_icon:{
         marginLeft:10
