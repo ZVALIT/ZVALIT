@@ -4,7 +4,7 @@ import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vec
 
 // manipulating screen height for Footer placement
 const screenHeight = Math.round(Dimensions.get("window").height);
-const Footer = () => {
+const Footer = (props) => {
     return (
         <View style={style.Footer}>
             <View style={style.market_logo}>
