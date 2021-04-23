@@ -1,9 +1,7 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Dimensions } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
 
-// manipulating screen height for Footer placement
-const screenHeight = Math.round(Dimensions.get("window").height);
 const Footer = () => {
     return (
         <View style={style.Footer}>
@@ -39,16 +37,19 @@ const Footer = () => {
             </TouchableOpacity>
         </View>
     );
-}
+};
+
 const style = StyleSheet.create({
     Footer: {
-        backgroundColor: "#5142a9",
-        marginTop: screenHeight-190,
+        backgroundColor: '#5142a9',    
         paddingTop: 10,
         paddingBottom: 19,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between"
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        bottom:0,
+        position: 'absolute',
+        width: '100%'
     },
     market_logo: {
         paddingLeft: 15
@@ -57,7 +58,7 @@ const style = StyleSheet.create({
         paddingRight: 15
     },
     footer_icon_text: {
-        color: "white"
+        color: 'white'
     },
     portfolio_icon:{
         marginLeft:10
