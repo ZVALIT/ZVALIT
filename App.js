@@ -23,7 +23,7 @@ export default function App() {
           fontWeight: "bold"
         }
       }}>
-        <Stack.Screen name="portfolio"  component={Portfolio} />
+        <Stack.Screen name="portfolio"  component={ Portfolio } />
         <Stack.Screen name="signin"  component={Signin} />
         <Stack.Screen name="signup"  component={Signup} />
         <Stack.Screen name="home" component={Home}/>

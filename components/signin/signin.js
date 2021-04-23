@@ -1,5 +1,5 @@
-import React from "react"
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from "react-native"
+import React from 'react';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 export default class Signin extends React.Component{
@@ -7,10 +7,14 @@ export default class Signin extends React.Component{
         return(
             <View>
                 <View style={style.back}>
-                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("portfolio")}>
-                        <AntDesign name="arrowleft" size={24} color="black" />
-                    </TouchableOpacity>
-                    <Text style={style.signintext}>SIGN IN</Text>
+                    <View>
+                        <TouchableOpacity onPress={()=>this.props.navigation.navigate("portfolio")}>
+                            <AntDesign name="arrowleft" size={24} color="black" />
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{flex: 1, paddingRight:65}} >
+                        <Text style={style.signintext}>SIGN IN</Text>
+                    </View> 
                 </View>
                 <View style={style.container}>
                     <View>
@@ -36,21 +40,22 @@ export default class Signin extends React.Component{
 }
 const style=StyleSheet.create({
     signintext:{
-        fontWeight:"bold",
-        marginLeft:"auto",
-        marginRight:"auto"
+        fontWeight: 'bold',
+        // marginLeft: 'auto',
+        // marginRight: 'auto'
+        fontSize:18
     },
     container:{
-        marginTop:80,
-        borderRadius:6,
-        marginLeft:20
+        marginTop: 80,
+        borderRadius: 6,
+        marginLeft: 20
     },
     SigninInputText:{
-        marginTop:10,
-        height:20,
+        marginTop: 10,
+        height: 20,
         borderBottomWidth:1,
         borderBottomColor:"#8bdc84",  
-        marginRight:20
+        marginRight: 30,
     },
     text:{
         marginTop:15 
@@ -69,12 +74,14 @@ const style=StyleSheet.create({
     },
     forgotpassword:{
         display:"flex",
-        marginTop:15   
+        marginTop:15 ,
+        marginLeft: 'auto',
+        marginRight:30  
     },
     back:{
-        display:"flex",
+        flex: 1,
         flexDirection:"row",
-        marginTop:50,
-        marginLeft:5
-    }
+        marginTop: 50,
+        justifyContent:'space-between'
+    },
 })

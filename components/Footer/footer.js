@@ -1,10 +1,13 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Dimensions } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, Dimensions, StatusBar } from "react-native";
 import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
 
 // manipulating screen height for Footer placement
-const screenHeight = Math.round(Dimensions.get("window").height);
-const Footer = () => {
+// const screenHeight = Math.round(Dimensions.get("window").height);
+const deviceHeight = Dimensions.get('window').height; 
+const screenHeight = Platform.select({ ios: deviceHeight, android: StatusBar.currentHeight > 24 ? deviceHeight : deviceHeight - StatusBar.currentHeight, });
+
+const Footer = (props) => {
     return (
         <View style={style.Footer}>
             <View style={style.market_logo}>
@@ -43,12 +46,15 @@ const Footer = () => {
 const style = StyleSheet.create({
     Footer: {
         backgroundColor: "#5142a9",
-        marginTop: screenHeight-190,
+        marginTop: screenHeight-170,
         paddingTop: 10,
         paddingBottom: 19,
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        bottom: 0,
+        position: 'absolute',
+        width: '100%'
     },
     market_logo: {
         paddingLeft: 15

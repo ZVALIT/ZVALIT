@@ -1,58 +1,78 @@
-import React from "react"
-import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native"
+import React from 'react';
+import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import Footer from '../Footer/footer';
+import { FontAwesome, AntDesign } from '@expo/vector-icons';
 
 export default function Portfolio(props){
     return(
-        <View>
-            <Text style={style.portfolio}>PORTFOLIO</Text>
-            <View>
-                <Image  style={style.coinmomo_logo} source={require("../../assets/coinmomo-logo.png")}/>
-                <Text style={style.signintext}>SIGN IN TO VIEW YOUR PORTFOLIO</Text>
+        <View style={style.Portfolio}>
+            <View style={style.PortfolioHeader}>
+                <Text style={style.PortfolioText}>PORTFOLIO</Text>
+                <View style={style.Icons}>
+                    <FontAwesome name= 'bell' size={24} color= 'orange' />
+                    <AntDesign name= 'plus' size={24} color= 'black' />
+                </View>
             </View>
-            <View style={style.signin}>
-                <TouchableOpacity onPress={()=>props.navigation.navigate("signin")}>
+            <View style={style.LogoAndText}>
+                <Image style={style.CoinmomoLogo} source={require( '../../assets/img/logo.png' )} />
+                <Text>Sign in to view your profile</Text> 
+            </View>
+            <View style={style.signupAndSignin}>
+                <TouchableOpacity>
                     <Text style={style.signinButton}>SIGN IN</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=>props.navigation.navigate("signup")}>
-                    <Text style={style.signupButton} >Don't have an account?</Text>
+                <TouchableOpacity>
+                    <Text style={style.SignupText}>Don't have an account?</Text>
                 </TouchableOpacity>
             </View>
+            <Footer props={ props }/>   
         </View>
     )
 }
-const style=StyleSheet.create({
-    signin:{
-        alignItems:"center"
+const style = StyleSheet.create({
+    Portfolio:{
+        position: 'relative',
+        height: '100%'
     },
-    signintext:{
-        textAlign:"center",
-        marginTop:20,
+    PortfolioHeader:{
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginTop: 25,
+        backgroundColor: 'white',
+        paddingTop: 20,
+        height: 60,
+        borderBottomWidth: 1,
+        borderBottomColor: 'black'
     },
-    portfolio:{
-        height:30,
-        marginTop:50,
-        paddingTop:4,
-        marginTop:50,
-        fontWeight:"bold",
-        marginLeft:30
+    Icons:{
+        width:90,
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     },
     signinButton:{
-        textAlign:"center",
-        marginTop:100,
-        width:300,
-        height:30,
-        backgroundColor:"#8bdc84",
-        alignItems:"center",
-        paddingTop:5,
-        color:"white",
-        marginBottom:10
+        height: 40,
+        marginLeft: 25,
+        marginRight: 25,
+        backgroundColor: '#8fc73d',
+        textAlign: 'center',
+        paddingTop: 10,
+        color: 'white',
     },
-    coinmomo_logo:{
-        display:"flex",
-        width:150,
-        height:40,
-        marginLeft:"auto",
-        marginRight:"auto",
-        marginTop:75
+    SignupText:{
+        textAlign: 'center',
+        marginTop: 10
+    },
+    LogoAndText:{
+         marginTop: '25%',
+         alignItems: 'center'
+    },
+    CoinmomoLogo:{
+        width: 150,
+        height: 40
+    },
+    signupAndSignin:{
+        marginTop: '30%'
     }
-})
+});
