@@ -7,10 +7,12 @@ export default function Signin(props){
     return(
         <View style={style.Signin}>
             <View style={style.IconAndText}>
-                   <TouchableOpacity onPress={()=>props.navigation.navigate('portfolio')}>
-                    <AntDesign style={style.Icon} name="arrowleft" size={24} color="black" />
+                <TouchableOpacity onPress={()=>props.navigation.navigate('portfolio')}>
+                    <AntDesign style={style.Icon} name="arrowleft" size={24} color='black' />
                 </TouchableOpacity>
                 <Text style={style.SigninText}>Sign In</Text>
+                <View style={style.empty}>
+                </View>
             </View>
             <View style={style.HeaderBorder}>
             </View>
@@ -32,28 +34,31 @@ const style=StyleSheet.create({
     Signin:{
         height: '100%'
     },
-    IconAndText:{
-         marginTop: 25,
-         height: 60,
-         paddingTop: 20,
-         display: 'flex',
-         flexDirection: 'row',
-         width: '56%',
-         justifyContent:'space-between'
+    empty: {
+        width:40,
+        height: 10,
+        backgroundColor: 'transparent'
     },
-    HeaderBorder:{
+    IconAndText:{
+        marginTop: 25,
+        height: 60,
+        paddingTop: 20,
         display: 'flex',
         borderBottomWidth: 0.5,
-        borderBottomColor: 'black'
+        borderBottomColor: 'black',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    HeaderBorder:{
+        display: 'flex',   
     },
     SigninText:{
         fontSize: 20,
         color: 'black',
-        textAlign:'center',
-        alignItems: 'center',
     },
     Icon:{
-        paddingLeft: 10
+        paddingLeft: 10,
+        width: 30
     },
     EmailText:{
          marginTop: '18%',

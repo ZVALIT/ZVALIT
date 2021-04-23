@@ -1,6 +1,5 @@
 import React from 'react';
 import Signin from './components/signin/signin';
-import Signup from './components/signup/signup';
 import Home from './components/home/home';
 import Portfolio from './components/portfolio/portfolio';
 import { createStackNavigator } from "@react-navigation/stack"
@@ -24,7 +23,6 @@ export default function App() {
       }}>
         <Stack.Screen name="portfolio" component={Portfolio} />
         <Stack.Screen name="signin"    component={Signin} />
-        <Stack.Screen name="signup"    component={Signup} />
         <Stack.Screen name="home"      component={Home}/>
       </Stack.Navigator>
     </NavigationContainer>
