@@ -3,17 +3,17 @@ import Footer from "../Footer/footer";
 import Header from "../header/header";
 import { View, StyleSheet } from "react-native";
 
-export default function Home(props){
-    return(
-        <View style={styles.Home}>
-            <Header/>
-            <Footer props={props}/>
-        </View>
-    )
+export default function Home(props) {
+  return (
+    <View style={style.Home}>
+      <Header />
+      <Footer props={props} />
+    </View>
+  )
 }
-const styles=StyleSheet.create({
-    Home:{
-        position: 'relative',
-        height: '100%'
-    }
-});
+const style = StyleSheet.create({
+  Home: {
+    position: 'relative',
+    height: '100%'
+  }
+})

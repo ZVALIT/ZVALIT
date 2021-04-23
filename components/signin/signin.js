@@ -7,14 +7,12 @@ export default function Signin(props){
     return(
         <View style={style.Signin}>
             <View style={style.IconAndText}>
-                <TouchableOpacity onPress={()=>props.navigation.navigate('portfolio')}>
+                <TouchableOpacity onPress={() => props.navigation.navigate('portfolio')}>
                     <AntDesign style={style.Icon} name="arrowleft" size={24} color='black' />
                 </TouchableOpacity>
                 <Text style={style.SigninText}>Sign In</Text>
                 <View style={style.empty}>
                 </View>
-            </View>
-            <View style={style.HeaderBorder}>
             </View>
             <Text style={style.EmailText}>Email</Text>
             <TextInput style={style.signinInputHolder}></TextInput>
@@ -31,15 +29,15 @@ export default function Signin(props){
     )
 }
 const style=StyleSheet.create({
-    Signin:{
+    Signin: {
         height: '100%'
     },
     empty: {
-        width:40,
+        width: 40,
         height: 10,
         backgroundColor: 'transparent'
     },
-    IconAndText:{
+    IconAndText: {
         marginTop: 25,
         height: 60,
         paddingTop: 20,
@@ -49,54 +47,53 @@ const style=StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
-    HeaderBorder:{
-        display: 'flex',   
+    HeaderBorder: {
+        display: 'flex',
     },
-    SigninText:{
+    SigninText: {
         fontSize: 20,
         color: 'black',
     },
-    Icon:{
+    Icon: {
         paddingLeft: 10,
         width: 30
     },
-    EmailText:{
-         marginTop: '18%',
-         color: 'black',
-         marginLeft: 20
-
+    EmailText: {
+        marginTop: '18%',
+        color: 'black',
+        marginLeft: 20
     },
-    PasswordText:{
+    PasswordText: {
         marginTop: '5%',
         color: 'black',
         marginLeft: 20
     },
-    signinInputHolder:{
-        marginTop:5,
+    signinInputHolder: {
+        marginTop: 5,
         height: 20,
         borderBottomColor: 'green',
         borderBottomWidth: 1,
         marginLeft: 20,
         marginRight: 20
     },
-    forgotPasswordText:{
+    forgotPasswordText: {
         marginLeft: 'auto',
         marginRight: 20,
         color: '#8fc73d',
         marginTop: '2%'
     },
-    LoginButton:{
+    LoginButton: {
         color: 'white',
-        marginTop:'35%',
+        marginTop: '35%',
         justifyContent: 'center',
         textAlign: 'center',
-        backgroundColor:'#8fc73d',
+        backgroundColor: '#8fc73d',
         height: 40,
         paddingTop: 13,
         marginLeft: 20,
         marginRight: 20
     },
-    instructions:{
+    instructions: {
         marginTop: '2%',
         textAlign: 'center'
     }
