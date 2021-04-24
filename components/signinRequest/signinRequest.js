@@ -18,7 +18,7 @@ export default function SigninRequest(props){
                 <Text>Sign in to view your profile</Text> 
             </View>
             <View style={style.signupAndSignin}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>props.props.navigation.navigate('signin')}>
                     <Text style={style.signinButton}>SIGN IN</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
@@ -41,7 +41,7 @@ const style = StyleSheet.create({
         paddingRight: 20,
         marginTop: 25,
         backgroundColor: 'white',
-        paddingTop: 20,
+        paddingTop: 25,
         height: 60,
         borderBottomWidth: 1,
         borderBottomColor: '#dcdcdc'
