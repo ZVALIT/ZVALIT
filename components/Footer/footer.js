@@ -1,7 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Dimensions, StatusBar } from "react-native";
-import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons'; 
-
+import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons';
 const Footer = (props) => {
     return (
         <View style={style.Footer}>
