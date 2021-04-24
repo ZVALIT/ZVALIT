@@ -44,7 +44,7 @@ const style = StyleSheet.create({
         paddingTop: 20,
         height: 60,
         borderBottomWidth: 1,
-        borderBottomColor: 'black'
+        borderBottomColor: '#dcdcdc'
     },
     Icons:{
         width:90,
