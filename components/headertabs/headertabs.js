@@ -15,7 +15,7 @@ export default function MyTabs() {
       setFontSize(8)
     } else if (deviceWidth == 360) {
       setFontSize(10)
-    } else if (deviceWidth == 411.42857142857144 || deviceWidth == 392.72727272727275) {
+    } else if (deviceWidth == 412 || deviceWidth == 393) {
       setFontSize(11)
     } else {
       setFontSize(12)
