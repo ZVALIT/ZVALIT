@@ -1,7 +1,6 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { Entypo, MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons';
-
+import { View, StyleSheet, Text, TouchableOpacity, Dimensions, StatusBar } from "react-native";
+import { Entypo,  MaterialCommunityIcons, FontAwesome, Feather } from '@expo/vector-icons';
 const Footer = (props) => {
     return (
         <View style={style.Footer}>
@@ -42,8 +41,8 @@ const Footer = (props) => {
 const style = StyleSheet.create({
     Footer: {
         backgroundColor: '#5142a9',
-        paddingTop: 10,
-        paddingBottom: 19,
+        paddingTop: 7,
+        paddingBottom: 7,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
