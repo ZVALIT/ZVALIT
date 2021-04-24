@@ -8,7 +8,7 @@ export default function Signin(props){
         <View style={style.Signin}>
             <View style={style.IconAndText}>
                 <TouchableOpacity onPress={() => props.navigation.navigate('portfolio')}>
-                    <AntDesign style={style.Icon} name="arrowleft" size={24} color='black' />
+                    <AntDesign style={style.Icon} name='arrowleft' size={24} color='black' />
                 </TouchableOpacity>
                 <Text style={style.SigninText}>Sign In</Text>
                 <View style={style.empty}>
@@ -33,8 +33,7 @@ const style=StyleSheet.create({
         height: '100%'
     },
     empty: {
-        width: 40,
-        height: 10,
+        width: 30,
         backgroundColor: 'transparent'
     },
     IconAndText: {
@@ -45,7 +44,8 @@ const style=StyleSheet.create({
         borderBottomWidth: 0.5,
         borderBottomColor: 'black',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        backgroundColor: 'white'
     },
     HeaderBorder: {
         display: 'flex',
@@ -55,8 +55,8 @@ const style=StyleSheet.create({
         color: 'black',
     },
     Icon: {
-        paddingLeft: 10,
-        width: 30
+        width: 30,
+        paddingLeft: 10
     },
     EmailText: {
         marginTop: '18%',
